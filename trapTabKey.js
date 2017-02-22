@@ -1,7 +1,13 @@
 var getFocusableElements = function(element) {
     var focusElemString = "a[href],button:not([disabled]),area[href],input:not([disabled]):not([type=hidden]),select:not([disabled]),textarea:not([disabled]),iframe,object,embed,*:not(.is-draggabe)[tabindex],*[contenteditable]";
-    var focusableElements = element.querySelectorAll(focusElemString);
-    focusableElements = Array.prototype.slice.call(focusableElements);
+    var tempElements = element.querySelectorAll(focusElemString);
+    tempElements = Array.prototype.slice.call(tempElements);
+    var focusableElements = [];
+
+    for (var i = 0; i < tempElements.length; i++) {
+      if(tempElements[i].offsetHeight !== 0) focusableElements.push(tempElements[i])
+    };
+    
     var object = {
       "all": focusableElements,
       "first": focusableElements[0],
