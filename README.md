@@ -1,5 +1,9 @@
 # a11y-trap-tabs
 Vanilla JavaScript function to trap the tab keypress inside an designated element.
+
+## Example
+https://codepen.io/seanus1138/full/ZjeaoJ/
+
 ## How to use
 Mark up your html how ever you would like, just make sure the target element that you will be passing to the `trapTabKey()` function wraps all the elements you want to trap focus to.
 
@@ -7,7 +11,7 @@ Review the code below:
 
 ### HTML
 ```html 
-<div class="js-target-elm">
+<div class="js-target-elem">
     <ul>
 	    <li><a href="#">Link 1</a></li>
 	    <li><a href="#">Link 2</a></li>
